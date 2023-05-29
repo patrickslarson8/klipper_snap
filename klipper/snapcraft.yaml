@@ -8,15 +8,18 @@ description: |
   All code falls under the GPL-3.0 License.
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
+architectures:
+  - build-on: amd64
 
 apps:
   # hello:
   #   command: bin/hello
-  # bash:
-  #   command: bash
+  klipper:
+    daemon: simple
 
 parts:
-  # gnu-hello:
-  #   source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
-  #   plugin: autotools
-
+  klipper:
+     source: https://github.com/Klipper3d/klipper
+     source-type: git
+     plugin: python
+     #build-packages: []
