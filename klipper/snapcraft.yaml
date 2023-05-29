@@ -8,18 +8,33 @@ description: |
   All code falls under the GPL-3.0 License.
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
-architectures:
-  - build-on: amd64
 
-apps:
-  # hello:
-  #   command: bin/hello
-  klipper:
-    daemon: simple
+# apps:
+#   # hello:
+#   #   command: bin/hello
+#   klipper:
+#     command: 
+#     daemon: simple
 
 parts:
   klipper:
      source: https://github.com/Klipper3d/klipper
      source-type: git
      plugin: python
-     #build-packages: []
+     build-packages: #These taken from Ubuntu 22 install script
+      - virtualenv
+      - python3-dev #possible error in Klipper repo, this was python-dev
+      - libffi-dev
+      - build-essential
+      - libncurses-dev
+      - libusb-dev
+      - avrdude
+      - gcc-avr
+      - binutils-avr
+      - avr-libc
+      - stm32flash
+      - dfu-util
+      - libnewlib-arm-none-eabi
+      - gcc-arm-none-eabi
+      - binutils-arm-none-eabi
+      - libusb-1.0-0 #possible error in Klipper repo, this was libusb-1.0.0
