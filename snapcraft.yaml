@@ -22,20 +22,20 @@ parts:
      plugin: python
      python-requirements:
      - /root/parts/klipper/src/scripts/klippy-requirements.txt
-    #  stage-packages: #These taken from Ubuntu 22 install script
-    #   - virtualenv
-    #   - python3-dev #possible error in Klipper repo, this was python-dev
-    #   - libffi-dev
-    #   - build-essential
-    #   - libncurses-dev
-    #   - libusb-dev
-    #   - avrdude
-    #   - gcc-avr
-    #   - binutils-avr
-    #   - avr-libc
-    #   - stm32flash
-    #   - dfu-util
-    #   - libnewlib-arm-none-eabi
-    #   - gcc-arm-none-eabi
-    #   - binutils-arm-none-eabi
-    #   - libusb-1.0-0 #possible error in Klipper repo, this was libusb-1.0.0
+     stage-packages: #These taken from Ubuntu 22 install script
+      - virtualenv
+      - python3-dev #possible error in Klipper repo, this was python-dev
+      - libffi-dev
+      - build-essential
+      - libncurses-dev
+      - libusb-dev
+      - avrdude
+      - gcc-avr
+      - binutils-avr
+      - avr-libc
+      - stm32flash
+      - dfu-util
+      - libnewlib-arm-none-eabi
+      - gcc-arm-none-eabi
+      - binutils-arm-none-eabi
+      - libusb-1.0-0 #possible error in Klipper repo, this was libusb-1.0.0
